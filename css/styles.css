@@ -1,105 +1,90 @@
 /*Pokédex stylesheet*/
-/*Fonts : font-family: 'Fredoka One', cursive;
-font-family: 'Source Sans Pro', sans-serif;*/
-/*Colors: Coral (#FF7F50)
-Fire Brick (#B22222)*/
-
 
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One|Source+Sans+Pro&display=swap');
 
 * {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #FFFFFF;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0
 }
 
+
 body {
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #FF7F50;
-  margin: 11px
+  text-align: center;
 }
 
 h1 {
   font-family: 'Fredoka One';
   font-size: 89px;
-  color: #FFFFFF;
-  text-align: center;
+  color: #FFEBCD;
+
 }
 
-button {
-  background-color: #696969; /* Dim Gray */
-  margin: 30px;
-  height: 30px;
-  width: 100px;
-  border-radius: 2em;
-}
-
-.wrap {
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 5px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px auto 10px auto;
-}
-
-
-/*.poke-list {
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 5px;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}*/
-
-#modal-container {
-  display:none;
-}
-
-#modal-container.is-visible {
-  display: block;
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* to show it above other content */
-  z-index: 999;
-  /* to allow scrolling if the screen is not high enough*/
-  overflow: auto;
-  /* this is used to center the modal */
-  text-align: center;
-  display: grid;
-}
-
-.modal {
-  margin:auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: #B22222;
-  padding: 15px;
-  width: 100%;
-  max-width: 700px;
-  text-align: left;
-}
-
-.modal-img {
+.page-header__logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding: 50px 25px 25px;
 }
+
+.pokeText {
+  text-align: center;
+  }
+
+  .pokemon-list {
+    list-style-type: none;
+
+  }
+
+  .pokemon-list li {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    margin: 5px;
+  }
+
+  .button-class {
+    background-color: #5F9EA0; /* Cadet Blue */
+    margin: 30px;
+    height: 30px;
+    width: 100px;
+    border-radius: 2em;
+    text-transform: capitalize;
+  }
+
+  .button-class:hover {
+    background-color:#476e9e;
+  }
+  .button-class:active {
+    position:relative;
+    top:1px;
+  }
+
+  .modal-title {
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .modal-body {
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .navbar
+  {
+    border-bottom: 1px;
+    border-bottom-style: dotted;
+    opacity: 0.9;
+    border-bottom-color: #78A7C3;
+  }

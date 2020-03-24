@@ -1,29 +1,123 @@
 <!DOCTYPE html>
-<html id=background lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="X-UA-Compatible" content="ie=edge">
-  <title>POKéDEX</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body>
-  <header class="header-body">
-    <h1 class="header-title">KG's Pokédex</h1>
-  </header>
+<html id= background lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>POKéDEX</title>
+  </head>
+  <body>
+    <header class="header-body">
+      <h1 class = "header-title">Pokédex!</h1>
+    </header>
+    <!-- Nav bar with search-->
+    <div class="container-fluid mb-5">
+      <nav class="navbar navbar-expand-md navbar-light bg-light fixed-bottom">
 
-  <div class="wrap">
-    <ul class="poke-list"></ul>
-  </div>
-  <div id='modal-container'>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav mr-auto">
+          </div>
+
+          <!-- Search input -->
+          <div class="navbar-nav ml-auto">
+            <form class="form-inline">
+              <input
+                class="form-control mr-sm-2"
+                id="myInput"
+                type="search"
+                autocomplete="off"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
+                Search Again!
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="col-12 modal-title" id="exampleModalLabel">...</h5>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--<img
+      src="img/pokemon_logo.png"
+      alt="Pokemon logo Responsive image"
+      class="page-header__logo img-fluid"
+    />-->
+    <div class="container">
+      <div class="row">
+        <div class="col"></div>
+        <div
+          class="pokeText col col-md-9 list-group"
+          id="myDIV"
+        >
+          <ul class="list-unstyled pokemon-list col"></ul>
+        </div>
+        <div class="col"></div>
+      </div>
+    </div>
+
+    <script src="js/promise-polyfill.js" defer></script>
+    <!-- Promises polyfill -->
+    <script src="js/fetch.umd.js" defer></script>
+    <!-- Fetch polyfill -->
     <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/scripts.js"></script>
-
-  </div>
-
-
-</body>
+  </body>
 </html>
