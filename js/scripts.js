@@ -59,7 +59,7 @@ var pokemonRepository = (function() {
       }
       item.abilities = [];
       for (var k = 0; k < details.abilities.length; k++) {
-        item.abilities.push(details.abilities[i].ability.name);
+        item.abilities.push(details.abilities[k].ability.name);
       }
     });
   }

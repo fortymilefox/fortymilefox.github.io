@@ -13,6 +13,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   background-color: #FF7F50;
+  background-image: linear-gradient(to bottom,#FF7F50, #FAEBD7);
   text-align: center;
 }
 
@@ -57,10 +58,10 @@ h1 {
   .button-class {
     background-color: #5F9EA0; /* Cadet Blue */
     margin: 30px;
-    height: 30px;
     width: 100px;
     border-radius: 2em;
     text-transform: capitalize;
+    box-shadow: 5px 5px 5px #777777;
   }
 
   .button-class:hover {
